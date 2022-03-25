@@ -44,7 +44,7 @@ a {
         color: white;
         font-size: 14px;
         font-weight: bold;
-        background: linear-gradient($color-secondary, $color-primary);
+        background: $color-gradient;
         border-radius: 30px;
         padding: 10px 15px;
         box-shadow: 0px 5px 5px #ccc;
