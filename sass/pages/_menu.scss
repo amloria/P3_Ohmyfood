@@ -16,8 +16,12 @@
         font-size: 18px;
         margin: 30px 0px 20px 0px;
         padding-bottom: 5px;
+    }
+    & h2::after {
+        content: "";
         border-bottom: 3px solid $color-tertiary;
         width: 45px;
+        display: block;
     }
 }
 .section-menu-header {
@@ -43,6 +47,14 @@
         font-weight: bold;
         align-self: flex-end;
     }
+    & h3, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.menu-details-text {
+    overflow: hidden;
 }
 .menu-btn-order {
     text-align: center;
@@ -55,5 +67,9 @@
     border-radius: 30px;
     padding: 15px 45px;
     box-shadow: 0px 5px 5px #ccc;
+    }
+    & a:hover {
+        filter: brightness(1.1);
+        box-shadow: 0px 5px 5px #aaaaaa;
     }
 }
