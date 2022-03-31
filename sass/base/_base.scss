@@ -65,7 +65,7 @@ a {
     margin-bottom: 20px;
     margin-left: 10px;
     border-radius: 15px;
-    & :nth-child(1) {
+    & p {
         background-color: $color-primary;
         color: white;
         font-weight: bold;
@@ -81,9 +81,15 @@ a {
         padding: 0px 20px;
         color: #777;
     }
-    & :nth-child(3) {
+    & span {
         font-weight: bold;
     }
+}
+.section-functioning a:hover {
+    background-color: #f9ebff; 
+    & i {
+        color: $color-primary;
+    }  
 }
 .section-restaurants {
     background-color: #f2f2f2;
