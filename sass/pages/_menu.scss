@@ -11,6 +11,7 @@
     padding: 20px 10px;
     margin-top: -30px;
     position: relative;
+    
     & h2 {
         color: #666;
         font-size: 18px;
@@ -36,26 +37,72 @@
 }
 .menu-details {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: white;
     border-radius: 15px;
     margin-bottom: 15px;
-    padding: 15px 10px;
     box-shadow: 5px 5px 5px 1px #e2e2e2;
-    & span {
+    overflow: hidden;
+    animation: show-menu 1s ease-in-out 1;
+    span {
+        margin-left: auto;
         font-weight: bold;
         align-self: flex-end;
+        padding: 15px;
     }
-    & h3, p {
+    h3, p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    .menu-select-item {
+        background-color: $color-tertiary;
+        color: #fff;
+        height: 72px;
+        min-width: 60px;
+        border-radius: 0px 15px 15px 0px;
+        display: flex;
+        margin-right: -60px;
+        transition: all 0.5s;
+        & i {
+            margin: auto;
+        }
+    }
+    &:hover .menu-select-item {
+        margin-right: 0px;
+        i {
+            animation: select 0.5s ease-in-out 1;
+            animation-fill-mode: both; 
+        }
+    }
 }
 .menu-details-text {
+    padding: 15px 10px;
     overflow: hidden;
 }
+/* ANIMATION SELECT-ITEM */
+@keyframes select {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* END */
+/* ANIMATION MENU */
+@keyframes show-menu {
+    0% {
+        transform: translateY(25%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@for $i from 1 through 4 {
+    .menu-details:nth-child(#{$i}) {
+        animation-delay: 100ms * $i;
+    }
+}
+/* END ANIMATION MENU */
 .menu-btn-order {
     text-align: center;
     margin: 50px;

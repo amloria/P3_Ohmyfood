@@ -18,10 +18,10 @@ a {
     background-color: #f9ebff;
     height: 100%;
     width: 100%;
-    line-height: 750px;
+    line-height: 500px;
     position: fixed;
     z-index: 2;
-    animation: show-content 2s ease-in-out 0.5s 1;
+    animation: show-content 1.8s ease-in-out 0.2s 1;
     animation-fill-mode: forwards;
 }
 .loader-base {
@@ -47,7 +47,7 @@ a {
     border-top-color: $color-primary;
     border-bottom-color: $color-secondary;
     display: block;
-    animation: spin 2.5s ease-in-out 0ms infinite;
+    animation: spin 2s ease-in-out 0ms infinite;
 }
 
 @keyframes spin {
@@ -181,7 +181,34 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-/* HEART ANIMATION */
+/* HEART TRANSITION */
+.heart {
+    background-color: transparent;
+    position: relative;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+        & :nth-child(2) {
+            color: #e470da;
+            opacity: 0;
+        }
+        & :nth-child(1) {
+            margin-top: 7px;
+            position: absolute;
+        }
+    &:hover {
+        & :nth-child(2) {
+            animation: like 250ms ease-in-out 1;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes like {
+    0% { visibility: hidden; opacity: 0; scale: (0); } 
+    100% { visibility: visible; opacity: 1; z-index: 1; scale: (1.2);}
+}
+/* END TRANSITION */
 
 .footer-navigation-list {
     list-style-type: none;
