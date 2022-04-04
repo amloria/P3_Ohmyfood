@@ -198,15 +198,15 @@ a {
         }
     &:hover {
         & :nth-child(2) {
-            animation: like 250ms ease-in-out 1;
+            animation: like 200ms ease-in-out 1;
             animation-fill-mode: forwards;
         }
     }
 }
 
 @keyframes like {
-    0% { visibility: hidden; opacity: 0; scale: (0); } 
-    100% { visibility: visible; opacity: 1; z-index: 1; scale: (1.2);}
+    0% { visibility: hidden; opacity: 0; transform: scale(0); } 
+    100% { visibility: visible; opacity: 1; z-index: 1; transform: scale(1.25);}
 }
 /* END TRANSITION */
 
