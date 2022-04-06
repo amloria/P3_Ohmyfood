@@ -1,36 +1,54 @@
 @media screen and (min-width: 768px) {
-    /* .steps-conteiner {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        .functioning-steps {
-            min-width: 250px;
-            span {
-                padding-right: 10px;
-                white-space: nowrap;
-            }
-        }
-    } */
-    /*.card-details {
-        width: 300px;
-    }*/
-    /* .steps-container, .block-cards-restaurants, .menu-container {
+    .functioning-header, .steps-container, .restaurants-header, .block-cards-restaurants {
         max-width: 750px;
         margin: auto;
-        /*display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .card-restaurants {
-            width: calc(100% / 2);
-            .card-img-restaurants {
-                width: 350px;
-            }
+    }
+    .functioning-header, .restaurants-header {
+        margin-bottom: 20px;
+    }
+    .functioning-steps {
+        width: calc(40%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-menu-header {
+        justify-content: center;
+        .heart {
+            margin-left: 30px;
         }
-    }*/
+    }
     .footer-navigation-list {
         text-align: center;
     }
 }
 @media screen and (min-width: 992px) {
-    
+    .functioning-header, .steps-container, .restaurants-header, .block-cards-restaurants {
+        max-width: 950px;
+    }
+    .steps-container, .block-cards-restaurants {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .functioning-steps {
+        width: calc(100% / 3 - 30px);
+    }
+    .card-restaurant {
+        width: calc(100% / 2 - 7.5px);
+    }
+    .img-menu {
+        height: 350px;
+    }
+    .section-menu {
+        
+    }
+    .menu-restaurant {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1199px;
+        margin: auto;
+        .menu-starters, .menu-main-dishes, .menu-desserts {
+            width: calc(100% / 3 - 15px);
+        }
+    }
 }

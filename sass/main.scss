@@ -1,9 +1,10 @@
 @import "./utils/variables";
-@import "./utils/breakponts";
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/placeholders";
 @import "./base/base";
+@import "./pages/menu";
+@import "./utils/breakponts";
 @import "./base/typography";
 @import "./components/buttons";
 @import "./layout/header";
@@ -11,5 +12,4 @@
 @import "./layout/container";
 @import "./layout/form";
 @import "./pages/work";
-@import "./pages/menu";
 @import "./pages/project";
