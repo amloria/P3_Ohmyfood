@@ -1,0 +1,21 @@
+.footer-navigation-list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 25px 20px 20px 20px;
+    background-color: #444444;
+    & li {
+        margin-bottom: 10px;
+    }
+    & a {
+        color: white;
+    }
+    & i {
+        padding-right: 10px;
+    }
+}
+.logo-small {
+    height: 20px;
+    width: 120px;
+    filter: invert(1);
+    margin-bottom: 10px;
+}

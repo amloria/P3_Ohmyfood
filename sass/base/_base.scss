@@ -90,6 +90,7 @@ a {
     }
     & p {
         font-size: 18px;
+        text-align: center;
         color: #444444;
         padding: 15px 0px 20px 0px;
     }
@@ -181,6 +182,10 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+.block-cards-restaurants article:hover {
+    transform: scale(1.01);
+    transition: all 0.3s;
+}
 /* HEART TRANSITION */
 .heart {
     background-color: transparent;
@@ -207,27 +212,4 @@ a {
 @keyframes like {
     0% { visibility: hidden; opacity: 0; transform: scale(0); } 
     100% { visibility: visible; opacity: 1; z-index: 1; transform: scale(1.25);}
-}
-/* END TRANSITION */
-
-.footer-navigation-list {
-    list-style-type: none;
-    margin: 0px;
-    padding: 25px 20px 20px 20px;
-    background-color: #444444;
-    & li {
-        margin-bottom: 10px;
-    }
-    & a {
-        color: white;
-    }
-    & i {
-        padding-right: 10px;
-    }
-}
-.logo-small {
-    height: 20px;
-    width: 120px;
-    filter: invert(1);
-    margin-bottom: 10px;
 }
